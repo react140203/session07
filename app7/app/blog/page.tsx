@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { GoBack } from "@/components/GoBack";
+
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 const getData = async () => {
@@ -12,9 +14,11 @@ const getData = async () => {
 //Server Component
 export default async function Page() {
   const posts = await getData();
+
   return (
     <>
       <h1>Blog </h1>
+      <GoBack></GoBack>
       {posts.map((p: any) => (
         <Link className="flex bg-slate-300" key={p.id} href={"/blog/" + p.id}>
           {p.title}
@@ -22,4 +26,14 @@ export default async function Page() {
       ))}
     </>
   );
+}
+
+export async function generateStaticParams() {
+  const posts = await fetch("https://jsonplaceholder.ir/posts").then((res) =>
+    res.json()
+  );
+
+  return posts.map((post: any) => ({
+    id: post.id,
+  }));
 }
