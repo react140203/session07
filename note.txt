@@ -1,0 +1,28 @@
+React Rendering
+    Client Side Rendering - CSR
+        Client
+        Build -> static -> server
+        Pros
+            Performance 
+            Cost server
+        Cons
+            SEO
+    
+NextJS    
+Remix
+
+    Server Side Rendering - SSR
+        *SEO*
+        1st req - server -> html -> client 
+                  client
+        
+
+
+    Static Side Generating - SSG
+        *SEO*  
+        blog
+        deploy
+
+    Incremental Static Generator - ISG
+
+    *Server Component
