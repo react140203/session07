@@ -9,7 +9,7 @@ React Rendering
             SEO
     
 NextJS    
-Remix
+Remix    
 
     Server Side Rendering - SSR
         *SEO*
@@ -26,3 +26,44 @@ Remix
     Incremental Static Generator - ISG
 
     *Server Component
+
+
+NextJS  
+    Routing
+
+
+
+Reverse Proxy - IIS -> nginx
+    fad.ir
+        /           -> upstream localhost:3001
+        /api        -> upstream localhost:57451
+
+
+
+
+Atomic css
+
+❌ .btn{
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.font-14{
+     font-size: 14px;
+}
+.pt-10{
+    padding-top: 10px;
+}
+
+.py-5{
+    padding-top: 10px;
+}
+
+tailwind
+
+
+
+.home{
+
+    flex min-h-screen flex-col items-center justify-between p-24
+}
